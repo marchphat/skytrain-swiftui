@@ -67,12 +67,12 @@ struct StationSearchCell: View {
         }
         .padding(.horizontal, 20)
         .onAppear {
-            switch self.station.serviceType {
-            case "BTS":
+            switch self.station.line {
+            case "bts":
                 self.image_name = "bts-logo"
-            case "MRT":
+            case "mrt":
                 self.image_name = "mrt-logo"
-            case "ARL":
+            case "arl":
                 self.image_name = "arl-logo"
             default:
                 self.image_name = "questionmark-logo"

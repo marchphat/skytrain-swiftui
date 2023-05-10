@@ -13,18 +13,20 @@ struct Station: Identifiable, Codable, Equatable {
     let name: String?
     let latitude: Double
     let longitude: Double
-    let serviceType: String?
-    let departure: Int
+    let line: String?
+    let lineColor: String?
+    let arriveTime: String? 
+    let isExtended: Bool
     
     var coordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
     }
 }
 
-enum ServiceType: String, CaseIterable {
-    case all = "ALL"
-    case bts = "BTS"
-    case mrt = "MRT"
-    case arl = "ARL"
+enum Line: String, CaseIterable {
+    case all = "all"
+    case bts = "bts"
+    case mrt = "mrt"
+    case arl = "arl"
 }
 

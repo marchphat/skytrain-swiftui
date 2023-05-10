@@ -18,11 +18,12 @@
 		4F59FC042A0A4BF50076D08F /* StationSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC032A0A4BF50076D08F /* StationSearchBar.swift */; };
 		4F59FC062A0A4C5E0076D08F /* StationSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC052A0A4C5E0076D08F /* StationSearchCell.swift */; };
 		4F59FC082A0A4F0A0076D08F /* StationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC072A0A4F0A0076D08F /* StationDetailView.swift */; };
-		4F59FC0C2A0A5DF50076D08F /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC0B2A0A5DF50076D08F /* Test.swift */; };
 		4F59FC132A0AE7940076D08F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC122A0AE7940076D08F /* MapView.swift */; };
 		4F59FC152A0AE8660076D08F /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC142A0AE8660076D08F /* AnnotationView.swift */; };
 		4F59FC192A0B47A80076D08F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC182A0B47A80076D08F /* HomeView.swift */; };
 		4F59FC1B2A0B5DEA0076D08F /* StationSearchBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC1A2A0B5DEA0076D08F /* StationSearchBox.swift */; };
+		4F59FC222A0C07230076D08F /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC212A0C07230076D08F /* Test.swift */; };
+		4F59FC242A0C0B0A0076D08F /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC232A0C0B0A0076D08F /* ViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,11 +38,12 @@
 		4F59FC032A0A4BF50076D08F /* StationSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchBar.swift; sourceTree = "<group>"; };
 		4F59FC052A0A4C5E0076D08F /* StationSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchCell.swift; sourceTree = "<group>"; };
 		4F59FC072A0A4F0A0076D08F /* StationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailView.swift; sourceTree = "<group>"; };
-		4F59FC0B2A0A5DF50076D08F /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		4F59FC122A0AE7940076D08F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		4F59FC142A0AE8660076D08F /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		4F59FC182A0B47A80076D08F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4F59FC1A2A0B5DEA0076D08F /* StationSearchBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchBox.swift; sourceTree = "<group>"; };
+		4F59FC212A0C07230076D08F /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		4F59FC232A0C0B0A0076D08F /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +84,7 @@
 				4F59FBC62A0A1EEE0076D08F /* Assets.xcassets */,
 				4F59FBC82A0A1EEE0076D08F /* Preview Content */,
 				4F59FBF82A0A3AB70076D08F /* Stations.json */,
-				4F59FC0B2A0A5DF50076D08F /* Test.swift */,
+				4F59FC212A0C07230076D08F /* Test.swift */,
 			);
 			path = skytrain;
 			sourceTree = "<group>";
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				4F59FBFD2A0A3E610076D08F /* Station.swift */,
+				4F59FC232A0C0B0A0076D08F /* ViewState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -232,11 +235,12 @@
 				4F59FC022A0A4AA90076D08F /* StationListView.swift in Sources */,
 				4F59FC082A0A4F0A0076D08F /* StationDetailView.swift in Sources */,
 				4F59FC062A0A4C5E0076D08F /* StationSearchCell.swift in Sources */,
+				4F59FC222A0C07230076D08F /* Test.swift in Sources */,
 				4F59FBFE2A0A3E610076D08F /* Station.swift in Sources */,
 				4F59FC1B2A0B5DEA0076D08F /* StationSearchBox.swift in Sources */,
-				4F59FC0C2A0A5DF50076D08F /* Test.swift in Sources */,
 				4F59FC192A0B47A80076D08F /* HomeView.swift in Sources */,
 				4F59FBC32A0A1EED0076D08F /* skytrainApp.swift in Sources */,
+				4F59FC242A0C0B0A0076D08F /* ViewState.swift in Sources */,
 				4F59FC132A0AE7940076D08F /* MapView.swift in Sources */,
 				4F59FC002A0A3EC30076D08F /* StationViewModel.swift in Sources */,
 			);

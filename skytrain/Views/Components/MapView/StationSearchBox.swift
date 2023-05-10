@@ -10,6 +10,7 @@ import SwiftUI
 struct StationSearchBox: View {
     @State private var paddingBottom: CGFloat = 20
     @State private var isShowingStationListView: Bool = false
+    @Binding var viewState: ViewState
     
     var body: some View {
         VStack {
@@ -55,9 +56,6 @@ struct StationSearchBox: View {
                             .foregroundColor(.gray.opacity(0.8))
                             .frame(height: 50)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            .onTapGesture {
-                                self.isShowingStationListView = true
-                            }
                     }
                     .padding(.horizontal)
                     .background(
@@ -68,6 +66,11 @@ struct StationSearchBox: View {
                                 radius: 4,x: 0, y: 4
                             )
                     )
+                    .onTapGesture {
+                        withAnimation(.spring()) {
+                            self.viewState = .searchingForStation
+                        }
+                    }
                     
                     
                     HStack {
@@ -98,6 +101,7 @@ struct StationSearchBox: View {
             .padding(.horizontal)
             
             
+            
             //MARK: - Button for changing view
             Button {
                 
@@ -110,8 +114,7 @@ struct StationSearchBox: View {
             .frame(height: 50)
             .background(Color.blue)
             .cornerRadius(14)
-            .padding(.trailing, 15)
-            .padding(.leading, 33)
+            .padding(.horizontal, 15)
             .padding(.top, 10)
             .shadow(
                 color: .black.opacity(0.29),
@@ -122,14 +125,11 @@ struct StationSearchBox: View {
         .frame(maxHeight: .infinity, alignment: .bottom)
         .onAppear(perform: {
             withAnimation(.default) {
-                self.paddingBottom = 45
+                self.paddingBottom = 40
             }
         })
         .padding(.horizontal)
         .padding(.bottom, self.paddingBottom)
-        .fullScreenCover(isPresented: self.$isShowingStationListView, content: {
-            StationListView()
-        })
     }
     
 }

@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var selectedStation: Station = Station(id: "", name: "", latitude: 0.0, longitude: 0.0, serviceType: "", departure: 0)
+    @State private var selectedStation = Station(id: "", name: "", latitude: 0.0, longitude: 0.0, line: "", lineColor: "", arriveTime: "", isExtended: false)
+    @State private var viewState = ViewState.home
     
     var body: some View {
         ZStack {
             MapView(selectedStation: self.$selectedStation)
             
-            StationSearchBox()
+            switch viewState {
+            case .home:
+                StationSearchBox(viewState: self.$viewState)
+                
+            case .searchingForStation:
+                StationListView(viewState: self.$viewState)
+            }
         }
     }
 }

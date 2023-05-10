@@ -7,59 +7,40 @@
 
 import SwiftUI
 
-//struct StationListView: View {
-//    @ObservedObject var stationViewModel = StationViewModel()
-//    @State private var changeView = false
-//
-//
-//    var body: some View {
-//        NavigationView {
-//            VStack {
-//                StationSearchBar(text: self.$stationViewModel.searchStation)
-//
-//                List(self.stationViewModel.selectedStations) { station in
-//                    StationSearchCell(station: station)
-//                        .onTapGesture {
-//                            self.stationViewModel.updateSearchText(with: station)
-//                            self.changeView = true
-//                        }
-//                        .fullScreenCover(isPresented: self.$changeView, content: {
-//                            let selectedStation = self.stationViewModel.selectedStations.first(where: { $0.name == self.stationViewModel.searchStation })
-//                            if let station = selectedStation {
-//                                StationDetailView(station: station) {
-//                                    self.changeView = false
-//                                    self.stationViewModel.searchStation = ""
-//                                }
-//                            }
-//                        })
-//                }
-//            }
-//            .navigationTitle("Search")
-//            .onChange(of: self.stationViewModel.searchStation) { station in
-//                self.stationViewModel.search(station)
-//            }
-//            .onAppear {
-//                self.stationViewModel.search("")
-//            }
-//        }
-//    }
-//}
-
-
 struct StationListView: View {
     @ObservedObject var stationViewModel = StationViewModel()
-    @State private var filterOption: ServiceType = .all
+    @State private var filterOption: Line = .all
     @State private var selectedStation: Station?
+    @Binding var viewState: ViewState
+    @State private var paddingTop: CGFloat = 429
     
     
     var body: some View {
         VStack {
+            Button(action: {
+                withAnimation(.spring()) {
+                    self.viewState = .home
+                }
+            }) {
+                ZStack {
+                    Circle()
+                        .fill(Color(red: 231/255, green: 231/255, blue: 231/255))
+                        .frame(width: 25, height: 25)
+                    Image(systemName: "xmark")
+                        .resizable()
+                        .frame(width: 10, height: 10)
+                        .foregroundColor(Color(red: 108/255, green: 108/255, blue: 108/255))
+                }
+            }
+            .padding(.top, 20)
+            .padding(.trailing, 25)
+            .frame(maxWidth: .infinity, alignment: .trailing)
+            
             
             //MARK: - Page Title
             Text("Origin Station")
                 .font(.title)
                 .fontWeight(.bold)
-                .padding(.top, 20)
                 .padding(.horizontal, 20)
                 .padding(.bottom, 5)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -72,10 +53,10 @@ struct StationListView: View {
             
             //MARK: - Search Bar Filter
             Picker(selection: $filterOption, label: Text("Filter By")) {
-                Text("ALL").tag(ServiceType.all)
-                Text("BTS").tag(ServiceType.bts)
-                Text("MRT").tag(ServiceType.mrt)
-                Text("ARL").tag(ServiceType.arl)
+                Text("ALL").tag(Line.all)
+                Text("BTS").tag(Line.bts)
+                Text("MRT").tag(Line.mrt)
+                Text("ARL").tag(Line.arl)
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding(.horizontal, 20)
@@ -114,8 +95,15 @@ struct StationListView: View {
             }
             
         }
+        .padding(.top, paddingTop)
         .onAppear {
             self.stationViewModel.search("", with: self.filterOption)
+            
+            withAnimation(.default) {
+                self.paddingTop = 0
+            }
         }
+        .background(.white)
+    
     }
 }

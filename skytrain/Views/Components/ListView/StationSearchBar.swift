@@ -5,15 +5,6 @@
 //  Created by Nantanat Thongthep on 9/5/2566 BE.
 //
 
-
-//        TextField("Search", text: $text)
-//            .textFieldStyle(RoundedBorderTextFieldStyle())
-//            .padding(.horizontal)
-//            .background(
-//                RoundedRectangle(cornerRadius: 14)
-//                    .fill(.gray.opacity(0.2))
-//            )
-
 import SwiftUI
 
 struct StationSearchBar: View {

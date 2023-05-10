@@ -18,16 +18,24 @@ final class StationViewModel: ObservableObject {
     
     private func getStations() {
         guard let url = Bundle.main.url(forResource: "Stations", withExtension: "json") else {
-            print("JSON file not found")
+            print("DEBUG: JSON file not found")
             return
         }
-        
-        let data = try? Data(contentsOf: url)
-        let stations = try? JSONDecoder().decode([Station].self, from: data!)
-        self.allStations = stations!
+
+        guard let data = try? Data(contentsOf: url) else {
+            print("DEBUG: Failed to get data from URL -> \(url)")
+            return
+        }
+
+        do {
+            let stations = try JSONDecoder().decode([Station].self, from: data)
+            self.allStations = stations
+        } catch {
+            print("DEBUG: Error decoding JSON data -> \(error.localizedDescription)")
+        }
     }
     
-    func search(_ input: String, with filterOption: ServiceType) {
+    func search(_ input: String, with filterOption: Line) {
         guard input.isEmpty else {
             switch filterOption {
             case .all:
@@ -36,7 +44,7 @@ final class StationViewModel: ObservableObject {
                 }
             default:
                 self.selectedStations = self.allStations.filter { result in
-                    result.name!.localizedCaseInsensitiveContains(input) && result.serviceType == filterOption.rawValue
+                    result.name!.localizedCaseInsensitiveContains(input) && result.line?.lowercased() == filterOption.rawValue
                 }
             }
             return
@@ -50,12 +58,12 @@ final class StationViewModel: ObservableObject {
         self.searchStation = station.name ?? "Unknown Station"
     }
     
-    func filterStations(_ filterOption: ServiceType) {
+    func filterStations(_ filterOption: Line) {
         switch filterOption {
         case .all:
             self.selectedStations = self.allStations
         default:
-            self.selectedStations = self.allStations.filter { $0.serviceType == filterOption.rawValue }
+            self.selectedStations = self.allStations.filter { $0.line?.lowercased() == filterOption.rawValue }
         }
     
     }

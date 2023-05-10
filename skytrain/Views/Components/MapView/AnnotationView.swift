@@ -10,7 +10,7 @@ import SwiftUI
 struct AnnotationView: View {
     let station: Station
     @State private var showSelected: Bool = false
-    @State var image_name: String = "questionmark"
+    @State var image_name: String = "questionmark-pin"
     @Binding var selectedStation: Station
 
     
@@ -46,12 +46,12 @@ struct AnnotationView: View {
             }
         }
         .onAppear {
-            switch self.station.serviceType {
-            case "BTS":
+            switch self.station.line {
+            case "bts":
                 self.image_name = "bts-green-pin"
-            case "MRT":
+            case "mrt":
                 self.image_name = "mrt-pin"
-            case "ARL":
+            case "arl":
                 self.image_name = "arl-pin"
             default:
                 self.image_name = "questionmark-pin"
