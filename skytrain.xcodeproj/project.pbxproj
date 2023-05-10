@@ -8,17 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		4F59FBC32A0A1EED0076D08F /* skytrainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FBC22A0A1EED0076D08F /* skytrainApp.swift */; };
-		4F59FBC52A0A1EED0076D08F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FBC42A0A1EED0076D08F /* ContentView.swift */; };
 		4F59FBC72A0A1EEE0076D08F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F59FBC62A0A1EEE0076D08F /* Assets.xcassets */; };
 		4F59FBCA2A0A1EEE0076D08F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F59FBC92A0A1EEE0076D08F /* Preview Assets.xcassets */; };
+		4F59FBD22A0A1F110076D08F /* Drawer in Frameworks */ = {isa = PBXBuildFile; productRef = 4F59FBD12A0A1F110076D08F /* Drawer */; };
+		4F59FBF92A0A3AB70076D08F /* Stations.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F59FBF82A0A3AB70076D08F /* Stations.json */; };
+		4F59FBFE2A0A3E610076D08F /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FBFD2A0A3E610076D08F /* Station.swift */; };
+		4F59FC002A0A3EC30076D08F /* StationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FBFF2A0A3EC30076D08F /* StationViewModel.swift */; };
+		4F59FC022A0A4AA90076D08F /* StationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC012A0A4AA90076D08F /* StationListView.swift */; };
+		4F59FC042A0A4BF50076D08F /* StationSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC032A0A4BF50076D08F /* StationSearchBar.swift */; };
+		4F59FC062A0A4C5E0076D08F /* StationSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC052A0A4C5E0076D08F /* StationSearchCell.swift */; };
+		4F59FC082A0A4F0A0076D08F /* StationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC072A0A4F0A0076D08F /* StationDetailView.swift */; };
+		4F59FC0C2A0A5DF50076D08F /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC0B2A0A5DF50076D08F /* Test.swift */; };
+		4F59FC132A0AE7940076D08F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC122A0AE7940076D08F /* MapView.swift */; };
+		4F59FC152A0AE8660076D08F /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC142A0AE8660076D08F /* AnnotationView.swift */; };
+		4F59FC192A0B47A80076D08F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC182A0B47A80076D08F /* HomeView.swift */; };
+		4F59FC1B2A0B5DEA0076D08F /* StationSearchBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC1A2A0B5DEA0076D08F /* StationSearchBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4F59FBBF2A0A1EED0076D08F /* skytrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = skytrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F59FBC22A0A1EED0076D08F /* skytrainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skytrainApp.swift; sourceTree = "<group>"; };
-		4F59FBC42A0A1EED0076D08F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4F59FBC62A0A1EEE0076D08F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F59FBC92A0A1EEE0076D08F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4F59FBF82A0A3AB70076D08F /* Stations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stations.json; sourceTree = "<group>"; };
+		4F59FBFD2A0A3E610076D08F /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		4F59FBFF2A0A3EC30076D08F /* StationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewModel.swift; sourceTree = "<group>"; };
+		4F59FC012A0A4AA90076D08F /* StationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListView.swift; sourceTree = "<group>"; };
+		4F59FC032A0A4BF50076D08F /* StationSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchBar.swift; sourceTree = "<group>"; };
+		4F59FC052A0A4C5E0076D08F /* StationSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchCell.swift; sourceTree = "<group>"; };
+		4F59FC072A0A4F0A0076D08F /* StationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailView.swift; sourceTree = "<group>"; };
+		4F59FC0B2A0A5DF50076D08F /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		4F59FC122A0AE7940076D08F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		4F59FC142A0AE8660076D08F /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
+		4F59FC182A0B47A80076D08F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4F59FC1A2A0B5DEA0076D08F /* StationSearchBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F59FBD22A0A1F110076D08F /* Drawer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +75,14 @@
 		4F59FBC12A0A1EED0076D08F /* skytrain */ = {
 			isa = PBXGroup;
 			children = (
+				4F59FBFA2A0A3DFE0076D08F /* Models */,
+				4F59FBFB2A0A3E040076D08F /* ViewModels */,
+				4F59FBFC2A0A3E1F0076D08F /* Views */,
 				4F59FBC22A0A1EED0076D08F /* skytrainApp.swift */,
-				4F59FBC42A0A1EED0076D08F /* ContentView.swift */,
 				4F59FBC62A0A1EEE0076D08F /* Assets.xcassets */,
 				4F59FBC82A0A1EEE0076D08F /* Preview Content */,
+				4F59FBF82A0A3AB70076D08F /* Stations.json */,
+				4F59FC0B2A0A5DF50076D08F /* Test.swift */,
 			);
 			path = skytrain;
 			sourceTree = "<group>";
@@ -65,6 +93,61 @@
 				4F59FBC92A0A1EEE0076D08F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4F59FBFA2A0A3DFE0076D08F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4F59FBFD2A0A3E610076D08F /* Station.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4F59FBFB2A0A3E040076D08F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4F59FBFF2A0A3EC30076D08F /* StationViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4F59FBFC2A0A3E1F0076D08F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4F59FC182A0B47A80076D08F /* HomeView.swift */,
+				4F59FC122A0AE7940076D08F /* MapView.swift */,
+				4F59FC012A0A4AA90076D08F /* StationListView.swift */,
+				4F59FC072A0A4F0A0076D08F /* StationDetailView.swift */,
+				4F59FC0A2A0A55E60076D08F /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4F59FC0A2A0A55E60076D08F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4F59FC1C2A0B694B0076D08F /* ListView */,
+				4F59FC1D2A0B695C0076D08F /* MapView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4F59FC1C2A0B694B0076D08F /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				4F59FC032A0A4BF50076D08F /* StationSearchBar.swift */,
+				4F59FC052A0A4C5E0076D08F /* StationSearchCell.swift */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		4F59FC1D2A0B695C0076D08F /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				4F59FC142A0AE8660076D08F /* AnnotationView.swift */,
+				4F59FC1A2A0B5DEA0076D08F /* StationSearchBox.swift */,
+			);
+			path = MapView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +166,9 @@
 			dependencies = (
 			);
 			name = skytrain;
+			packageProductDependencies = (
+				4F59FBD12A0A1F110076D08F /* Drawer */,
+			);
 			productName = skytrain;
 			productReference = 4F59FBBF2A0A1EED0076D08F /* skytrain.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +197,9 @@
 				Base,
 			);
 			mainGroup = 4F59FBB62A0A1EED0076D08F;
+			packageReferences = (
+				4F59FBD02A0A1F110076D08F /* XCRemoteSwiftPackageReference "swiftui-drawer" */,
+			);
 			productRefGroup = 4F59FBC02A0A1EED0076D08F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F59FBF92A0A3AB70076D08F /* Stations.json in Resources */,
 				4F59FBCA2A0A1EEE0076D08F /* Preview Assets.xcassets in Resources */,
 				4F59FBC72A0A1EEE0076D08F /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +227,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F59FBC52A0A1EED0076D08F /* ContentView.swift in Sources */,
+				4F59FC042A0A4BF50076D08F /* StationSearchBar.swift in Sources */,
+				4F59FC152A0AE8660076D08F /* AnnotationView.swift in Sources */,
+				4F59FC022A0A4AA90076D08F /* StationListView.swift in Sources */,
+				4F59FC082A0A4F0A0076D08F /* StationDetailView.swift in Sources */,
+				4F59FC062A0A4C5E0076D08F /* StationSearchCell.swift in Sources */,
+				4F59FBFE2A0A3E610076D08F /* Station.swift in Sources */,
+				4F59FC1B2A0B5DEA0076D08F /* StationSearchBox.swift in Sources */,
+				4F59FC0C2A0A5DF50076D08F /* Test.swift in Sources */,
+				4F59FC192A0B47A80076D08F /* HomeView.swift in Sources */,
 				4F59FBC32A0A1EED0076D08F /* skytrainApp.swift in Sources */,
+				4F59FC132A0AE7940076D08F /* MapView.swift in Sources */,
+				4F59FC002A0A3EC30076D08F /* StationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +439,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4F59FBD02A0A1F110076D08F /* XCRemoteSwiftPackageReference "swiftui-drawer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maustinstar/swiftui-drawer";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4F59FBD12A0A1F110076D08F /* Drawer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F59FBD02A0A1F110076D08F /* XCRemoteSwiftPackageReference "swiftui-drawer" */;
+			productName = Drawer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4F59FBB72A0A1EED0076D08F /* Project object */;
 }
