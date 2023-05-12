@@ -1,4 +1,5 @@
 //
+//
 //  StationSearchBar.swift
 //  skytrain
 //
@@ -8,7 +9,6 @@
 import SwiftUI
 
 struct StationSearchBar: View {
-    @ObservedObject var stationViewModel = StationViewModel()
     @Binding var text: String
     
     var body: some View {
@@ -22,7 +22,7 @@ struct StationSearchBar: View {
         .frame(height: 40)
         .padding(.horizontal, 35)
         .background(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: 10)
                 .fill(Color(red: 118/255, green: 118/255, blue: 118/254, opacity: 12/100))
                 .padding(.horizontal, 20)
         )

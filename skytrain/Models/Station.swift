@@ -15,7 +15,7 @@ struct Station: Identifiable, Codable, Equatable {
     let longitude: Double
     let line: String?
     let lineColor: String?
-    let arriveTime: String? 
+    let arriveTime: String?
     let isExtended: Bool
     
     var coordinate: CLLocationCoordinate2D {
@@ -29,4 +29,13 @@ enum Line: String, CaseIterable {
     case mrt = "mrt"
     case arl = "arl"
 }
+
+//let noStation = Station(id: "",
+//                        name: nil,
+//                        latitude: 13.703119561182797,
+//                        longitude: 100.75187358910955,
+//                        line: "",
+//                        lineColor: "",
+//                        arriveTime: "",
+//                        isExtended: false)
 

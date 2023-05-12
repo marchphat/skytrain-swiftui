@@ -9,7 +9,8 @@ import Foundation
 
 enum ViewState {
     case home
-    case searchingForStation
-//    case stationSelected
+    case searchFromStation
+    case searchToStation
+//    case selectedStation
 //    case routeCreated
 }

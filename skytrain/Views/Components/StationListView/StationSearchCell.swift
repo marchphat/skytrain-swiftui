@@ -4,29 +4,11 @@
 //
 //  Created by Nantanat Thongthep on 9/5/2566 BE.
 //
-
-//                NavigationLink(destination: StationDetailView(station: self.station)) {
-//                    VStack(alignment: .leading) {
-//                        Text(self.station.name ?? "")
-//                            .font(.headline)
-//                        Text("\(self.station.latitude), \(self.station.longitude)")
-//                            .font(.subheadline)
-//                    }
-//                }
-
-
-//        VStack(alignment: .leading) {
-//            Text(self.station.name ?? "")
-//
-//            Text("\(self.station.latitude), \(self.station.longitude)")
-//        }
-
-
 import SwiftUI
 
 struct StationSearchCell: View {
+    @State var image_name: String = "questionmark-logo"
     var station: Station
-    @State var image_name: String = "questionmark"
     
     var body: some View {
         HStack {
@@ -41,7 +23,7 @@ struct StationSearchCell: View {
                             .stroke(.gray.opacity(0.2), lineWidth: 4)
                     )
                 
-                Image(self.image_name)
+                Image(image_name)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 25, height: 25)
@@ -50,12 +32,12 @@ struct StationSearchCell: View {
             //MARK: - Station Details
             VStack(alignment: .leading) {
                 HStack {
-                    Text(self.station.id ?? "ID Not found")
+                    Text(station.id ?? "ID not found.")
                         .font(.title3)
                         .fontWeight(.semibold)
                 }
                 
-                Text(self.station.name ?? "Unknown Station")
+                Text(station.name ?? "Station not found.")
                     .font(.body)
                     .lineLimit(1)
                 
@@ -67,15 +49,15 @@ struct StationSearchCell: View {
         }
         .padding(.horizontal, 20)
         .onAppear {
-            switch self.station.line {
+            switch station.line {
             case "bts":
-                self.image_name = "bts-logo"
+                image_name = "bts-logo"
             case "mrt":
-                self.image_name = "mrt-logo"
+                image_name = "mrt-logo"
             case "arl":
-                self.image_name = "arl-logo"
+                image_name = "arl-logo"
             default:
-                self.image_name = "questionmark-logo"
+                image_name = "questionmark-logo"
             }
         }
         

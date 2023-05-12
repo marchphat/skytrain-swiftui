@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F3E9A6E2A0D5C5000442C8C /* StationSearchCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3E9A6D2A0D5C5000442C8C /* StationSearchCloseButton.swift */; };
+		4F3E9A702A0D5D7A00442C8C /* StationSearchBarFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3E9A6F2A0D5D7A00442C8C /* StationSearchBarFilter.swift */; };
+		4F3E9A722A0D5F8B00442C8C /* StationSearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3E9A712A0D5F8B00442C8C /* StationSearchList.swift */; };
 		4F59FBC32A0A1EED0076D08F /* skytrainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FBC22A0A1EED0076D08F /* skytrainApp.swift */; };
 		4F59FBC72A0A1EEE0076D08F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F59FBC62A0A1EEE0076D08F /* Assets.xcassets */; };
 		4F59FBCA2A0A1EEE0076D08F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F59FBC92A0A1EEE0076D08F /* Preview Assets.xcassets */; };
@@ -17,16 +20,17 @@
 		4F59FC022A0A4AA90076D08F /* StationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC012A0A4AA90076D08F /* StationListView.swift */; };
 		4F59FC042A0A4BF50076D08F /* StationSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC032A0A4BF50076D08F /* StationSearchBar.swift */; };
 		4F59FC062A0A4C5E0076D08F /* StationSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC052A0A4C5E0076D08F /* StationSearchCell.swift */; };
-		4F59FC082A0A4F0A0076D08F /* StationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC072A0A4F0A0076D08F /* StationDetailView.swift */; };
 		4F59FC132A0AE7940076D08F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC122A0AE7940076D08F /* MapView.swift */; };
 		4F59FC152A0AE8660076D08F /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC142A0AE8660076D08F /* AnnotationView.swift */; };
 		4F59FC192A0B47A80076D08F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC182A0B47A80076D08F /* HomeView.swift */; };
 		4F59FC1B2A0B5DEA0076D08F /* StationSearchBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC1A2A0B5DEA0076D08F /* StationSearchBox.swift */; };
-		4F59FC222A0C07230076D08F /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC212A0C07230076D08F /* Test.swift */; };
 		4F59FC242A0C0B0A0076D08F /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC232A0C0B0A0076D08F /* ViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F3E9A6D2A0D5C5000442C8C /* StationSearchCloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchCloseButton.swift; sourceTree = "<group>"; };
+		4F3E9A6F2A0D5D7A00442C8C /* StationSearchBarFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchBarFilter.swift; sourceTree = "<group>"; };
+		4F3E9A712A0D5F8B00442C8C /* StationSearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchList.swift; sourceTree = "<group>"; };
 		4F59FBBF2A0A1EED0076D08F /* skytrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = skytrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F59FBC22A0A1EED0076D08F /* skytrainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skytrainApp.swift; sourceTree = "<group>"; };
 		4F59FBC62A0A1EEE0076D08F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,12 +41,10 @@
 		4F59FC012A0A4AA90076D08F /* StationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListView.swift; sourceTree = "<group>"; };
 		4F59FC032A0A4BF50076D08F /* StationSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchBar.swift; sourceTree = "<group>"; };
 		4F59FC052A0A4C5E0076D08F /* StationSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchCell.swift; sourceTree = "<group>"; };
-		4F59FC072A0A4F0A0076D08F /* StationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailView.swift; sourceTree = "<group>"; };
 		4F59FC122A0AE7940076D08F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		4F59FC142A0AE8660076D08F /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		4F59FC182A0B47A80076D08F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4F59FC1A2A0B5DEA0076D08F /* StationSearchBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchBox.swift; sourceTree = "<group>"; };
-		4F59FC212A0C07230076D08F /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		4F59FC232A0C0B0A0076D08F /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,7 +86,6 @@
 				4F59FBC62A0A1EEE0076D08F /* Assets.xcassets */,
 				4F59FBC82A0A1EEE0076D08F /* Preview Content */,
 				4F59FBF82A0A3AB70076D08F /* Stations.json */,
-				4F59FC212A0C07230076D08F /* Test.swift */,
 			);
 			path = skytrain;
 			sourceTree = "<group>";
@@ -118,9 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				4F59FC182A0B47A80076D08F /* HomeView.swift */,
-				4F59FC122A0AE7940076D08F /* MapView.swift */,
 				4F59FC012A0A4AA90076D08F /* StationListView.swift */,
-				4F59FC072A0A4F0A0076D08F /* StationDetailView.swift */,
 				4F59FC0A2A0A55E60076D08F /* Components */,
 			);
 			path = Views;
@@ -129,28 +128,32 @@
 		4F59FC0A2A0A55E60076D08F /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				4F59FC1C2A0B694B0076D08F /* ListView */,
-				4F59FC1D2A0B695C0076D08F /* MapView */,
+				4F59FC1D2A0B695C0076D08F /* HomeView */,
+				4F59FC1C2A0B694B0076D08F /* StationListView */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		4F59FC1C2A0B694B0076D08F /* ListView */ = {
+		4F59FC1C2A0B694B0076D08F /* StationListView */ = {
 			isa = PBXGroup;
 			children = (
+				4F3E9A6D2A0D5C5000442C8C /* StationSearchCloseButton.swift */,
 				4F59FC032A0A4BF50076D08F /* StationSearchBar.swift */,
+				4F3E9A6F2A0D5D7A00442C8C /* StationSearchBarFilter.swift */,
+				4F3E9A712A0D5F8B00442C8C /* StationSearchList.swift */,
 				4F59FC052A0A4C5E0076D08F /* StationSearchCell.swift */,
 			);
-			path = ListView;
+			path = StationListView;
 			sourceTree = "<group>";
 		};
-		4F59FC1D2A0B695C0076D08F /* MapView */ = {
+		4F59FC1D2A0B695C0076D08F /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
+				4F59FC122A0AE7940076D08F /* MapView.swift */,
 				4F59FC142A0AE8660076D08F /* AnnotationView.swift */,
 				4F59FC1A2A0B5DEA0076D08F /* StationSearchBox.swift */,
 			);
-			path = MapView;
+			path = HomeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,18 +233,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F3E9A6E2A0D5C5000442C8C /* StationSearchCloseButton.swift in Sources */,
 				4F59FC042A0A4BF50076D08F /* StationSearchBar.swift in Sources */,
 				4F59FC152A0AE8660076D08F /* AnnotationView.swift in Sources */,
 				4F59FC022A0A4AA90076D08F /* StationListView.swift in Sources */,
-				4F59FC082A0A4F0A0076D08F /* StationDetailView.swift in Sources */,
 				4F59FC062A0A4C5E0076D08F /* StationSearchCell.swift in Sources */,
-				4F59FC222A0C07230076D08F /* Test.swift in Sources */,
 				4F59FBFE2A0A3E610076D08F /* Station.swift in Sources */,
 				4F59FC1B2A0B5DEA0076D08F /* StationSearchBox.swift in Sources */,
 				4F59FC192A0B47A80076D08F /* HomeView.swift in Sources */,
 				4F59FBC32A0A1EED0076D08F /* skytrainApp.swift in Sources */,
 				4F59FC242A0C0B0A0076D08F /* ViewState.swift in Sources */,
 				4F59FC132A0AE7940076D08F /* MapView.swift in Sources */,
+				4F3E9A702A0D5D7A00442C8C /* StationSearchBarFilter.swift in Sources */,
+				4F3E9A722A0D5F8B00442C8C /* StationSearchList.swift in Sources */,
 				4F59FC002A0A3EC30076D08F /* StationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +378,7 @@
 				DEVELOPMENT_TEAM = X34AX4W9SU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "you need to allow your location to connect your driver";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -403,6 +408,7 @@
 				DEVELOPMENT_TEAM = X34AX4W9SU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "you need to allow your location to connect your driver";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

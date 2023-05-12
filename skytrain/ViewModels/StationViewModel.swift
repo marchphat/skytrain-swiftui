@@ -8,65 +8,54 @@
 import Foundation
 
 final class StationViewModel: ObservableObject {
+    
+    // MARK: - Published Properties
     @Published var searchStation = ""
     @Published var selectedStations = [Station]()
     @Published var allStations = [Station]()
     
+    // MARK: - Initializer
     init() {
         getStations()
     }
     
+    // MARK: - Private Methods
     private func getStations() {
-        guard let url = Bundle.main.url(forResource: "Stations", withExtension: "json") else {
-            print("DEBUG: JSON file not found")
+        guard let url = Bundle.main.url(forResource: "Stations", withExtension: "json"),
+              let data = try? Data(contentsOf: url) else {
+            print("JSON file not found or failed to get data from URL")
             return
         }
-
-        guard let data = try? Data(contentsOf: url) else {
-            print("DEBUG: Failed to get data from URL -> \(url)")
-            return
-        }
-
+        
         do {
             let stations = try JSONDecoder().decode([Station].self, from: data)
-            self.allStations = stations
+            allStations = stations
         } catch {
-            print("DEBUG: Error decoding JSON data -> \(error.localizedDescription)")
+            print("Error decoding JSON data: \(error.localizedDescription)")
         }
     }
     
-    func search(_ input: String, with filterOption: Line) {
-        guard input.isEmpty else {
-            switch filterOption {
-            case .all:
-                self.selectedStations = self.allStations.filter { result in
-                    result.name!.localizedCaseInsensitiveContains(input)
-                }
-            default:
-                self.selectedStations = self.allStations.filter { result in
-                    result.name!.localizedCaseInsensitiveContains(input) && result.line?.lowercased() == filterOption.rawValue
-                }
+    // MARK: - Public Methods
+    func filterSelectedStation(_ stationLine: Line, viewState: ViewState, selectedFromStation: Station?, selectedToStation: Station?) {
+        selectedStations = allStations.filter { station in
+            let lineMatch = stationLine == .all || station.line?.lowercased() == stationLine.rawValue
+            var searchTextMatch = true
+            
+            if !searchStation.isEmpty {
+                let nameMatch = station.name?.localizedCaseInsensitiveContains(searchStation) == true
+                let idMatch = station.id?.localizedCaseInsensitiveContains(searchStation) == true
+                searchTextMatch = nameMatch || idMatch
             }
-            return
+            
+            switch viewState {
+            case .home:
+                return false
+            case .searchFromStation:
+                return lineMatch && searchTextMatch && station != selectedToStation
+            case .searchToStation:
+                return lineMatch && searchTextMatch && station != selectedFromStation
+            }
         }
-        
-        self.selectedStations = self.allStations
-        
-    }
-    
-    func updateSearchText(with station: Station) {
-        self.searchStation = station.name ?? "Unknown Station"
-    }
-    
-    func filterStations(_ filterOption: Line) {
-        switch filterOption {
-        case .all:
-            self.selectedStations = self.allStations
-        default:
-            self.selectedStations = self.allStations.filter { $0.line?.lowercased() == filterOption.rawValue }
-        }
-    
     }
     
 }
-
