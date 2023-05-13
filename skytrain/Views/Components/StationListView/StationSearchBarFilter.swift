@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct StationSearchBarFilter: View {
-    @Binding var stationLine: Line
+    @Binding var selectedStationLine: StationLine
     
     var body: some View {
-        Picker(selection: $stationLine, label: Text("Filter By")) {
-            Text("ALL").tag(Line.all)
-            Text("BTS").tag(Line.bts)
-            Text("MRT").tag(Line.mrt)
-            Text("ARL").tag(Line.arl)
+        Picker(selection: $selectedStationLine, label: Text("Filter By")) {
+            Text("ALL").tag(StationLine.all)
+            Text("BTS").tag(StationLine.bts)
+            Text("MRT").tag(StationLine.mrt)
+            Text("ARL").tag(StationLine.arl)
         }
         .pickerStyle(SegmentedPickerStyle())
         .padding(.horizontal, 20)

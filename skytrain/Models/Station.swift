@@ -23,19 +23,10 @@ struct Station: Identifiable, Codable, Equatable {
     }
 }
 
-enum Line: String, CaseIterable {
+enum StationLine: String, CaseIterable {
     case all = "all"
     case bts = "bts"
     case mrt = "mrt"
     case arl = "arl"
 }
-
-//let noStation = Station(id: "",
-//                        name: nil,
-//                        latitude: 13.703119561182797,
-//                        longitude: 100.75187358910955,
-//                        line: "",
-//                        lineColor: "",
-//                        arriveTime: "",
-//                        isExtended: false)
 

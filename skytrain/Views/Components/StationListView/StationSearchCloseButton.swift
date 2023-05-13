@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct StationSearchCloseButton: View {
-    @Binding var viewState: ViewState
+    @Binding var currentView: ViewState
     
     var body: some View {
         Button(action: {
             withAnimation(.spring()) {
                 DispatchQueue.main.async {
-                    viewState = .home
+                    currentView = .home
                 }
             }
         }) {

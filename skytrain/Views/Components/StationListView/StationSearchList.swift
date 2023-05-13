@@ -9,10 +9,10 @@ import SwiftUI
 
 struct StationSearchList: View {
     @Binding var selectedStation: [Station]
-    @Binding var viewState: ViewState
+    @Binding var currentView: ViewState
     @Binding var selectedFromStation: Station?
     @Binding var selectedToStation: Station?
-    @Binding var previousViewState: ViewState
+    @Binding var previousView: ViewState
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
@@ -22,21 +22,20 @@ struct StationSearchList: View {
                         .fill(Color.clear)
                         .contentShape(Rectangle())
                         .onTapGesture {
-                            switch viewState {
+                            switch currentView {
                             case .searchFromStation:
                                 selectedFromStation = station
-                                previousViewState = .searchFromStation
+                                previousView = .searchFromStation
                             case .searchToStation:
                                 selectedToStation = station
-                                previousViewState = .searchToStation
+                                previousView = .searchToStation
                             default:
-                                print("DEBUG: This view state does not exist.")
+                                print("DEBUG: This view state is not for searching station.")
                             }
 
-                            
                             withAnimation(.spring()) {
                                 DispatchQueue.main.async {
-                                    viewState = .home
+                                    currentView = .home
                                 }
                             }
                         }
@@ -44,6 +43,7 @@ struct StationSearchList: View {
                     StationSearchCell(station: station)
                 }
                 .padding(.top, 8)
+                
                 Divider().padding(.horizontal, 20)
             }
         }

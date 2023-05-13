@@ -1,7 +1,7 @@
 [
     {
         "id": "A1",
-        "name": "Suvarnabhumi",
+        "name": "Suvarnabhumi ARL",
         "latitude": 13.703119561182797,
         "longitude": 100.75187358910955,
         "line": "arl",
@@ -11,7 +11,7 @@
     },
     {
         "id": "A2",
-        "name": "Lat Krabang",
+        "name": "Lat Krabang ARL",
         "latitude": 13.734276250159681,
         "longitude": 100.74759724392246,
         "line": "arl",
@@ -21,7 +21,7 @@
     },
     {
         "id": "A3",
-        "name": "Ban Thap Chang",
+        "name": "Ban Thap Chang ARL",
         "latitude": 13.739516797582066,
         "longitude": 100.69045284398449,
         "line": "arl",

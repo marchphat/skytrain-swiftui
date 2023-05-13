@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct StationSearchBox: View {
-    @Binding var viewState: ViewState
+    @State private var paddingBottom: CGFloat = 20
+    @State private var isShowingStationListView: Bool = false
+    
+    @Binding var currentView: ViewState
     @Binding var selectedFromStation: Station?
     @Binding var selectedToStation: Station?
     
-    @State private var paddingBottom: CGFloat = 20
-    @State private var isShowingStationListView: Bool = false
     private var isInputCompleted: Bool  {
         return selectedFromStation == nil || selectedToStation == nil
     }
@@ -75,7 +76,7 @@ struct StationSearchBox: View {
                     )
                     .onTapGesture {
                         DispatchQueue.main.async {
-                            viewState = .searchFromStation
+                            currentView = .searchFromStation
                         }
                     }
                     
@@ -105,7 +106,7 @@ struct StationSearchBox: View {
                     )
                     .onTapGesture {
                         DispatchQueue.main.async {
-                            viewState = .searchToStation
+                            currentView = .searchToStation
                         }
                     }
                 }
@@ -118,13 +119,14 @@ struct StationSearchBox: View {
             Button {
                 
             } label: {
-                Text("Directions")
-                    .foregroundColor(isInputCompleted ? Color.gray : Color.white)
+                Text("Get directions")
+                    .foregroundColor(isInputCompleted ? Color.blue : Color.white)
                     .fontWeight(.semibold)
+                    .font(.system(size: 16))
             }
             .frame(maxWidth: .infinity)
             .frame(height: 45)
-            .background(isInputCompleted ? Color(red: 220/255, green: 220/255, blue: 220/255) : Color.blue)
+            .background(isInputCompleted ? Color(red: 235/255, green: 235/255, blue: 235/255) : Color.blue)
             .cornerRadius(10)
             .padding(.horizontal, 15)
             .padding(.top, 10)

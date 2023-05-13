@@ -7,12 +7,11 @@
 import SwiftUI
 
 struct StationSearchCell: View {
-    @State var image_name: String = "questionmark-logo"
+    @State private var image_name: String = "questionmark-logo"
     var station: Station
     
     var body: some View {
         HStack {
-            
             //MARK: - Station Logo
             ZStack {
                 RoundedRectangle(cornerRadius: 25)

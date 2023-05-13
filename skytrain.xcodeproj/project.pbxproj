@@ -25,6 +25,7 @@
 		4F59FC192A0B47A80076D08F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC182A0B47A80076D08F /* HomeView.swift */; };
 		4F59FC1B2A0B5DEA0076D08F /* StationSearchBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC1A2A0B5DEA0076D08F /* StationSearchBox.swift */; };
 		4F59FC242A0C0B0A0076D08F /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC232A0C0B0A0076D08F /* ViewState.swift */; };
+		4F636D1D2A0EF9E6003FE336 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4F636D1C2A0EF9E6003FE336 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		4F59FC182A0B47A80076D08F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4F59FC1A2A0B5DEA0076D08F /* StationSearchBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchBox.swift; sourceTree = "<group>"; };
 		4F59FC232A0C0B0A0076D08F /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		4F8F7ECD2A0F7C1B00D25D93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F59FBD22A0A1F110076D08F /* Drawer in Frameworks */,
+				4F636D1D2A0EF9E6003FE336 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +82,7 @@
 		4F59FBC12A0A1EED0076D08F /* skytrain */ = {
 			isa = PBXGroup;
 			children = (
+				4F8F7ECD2A0F7C1B00D25D93 /* Info.plist */,
 				4F59FBFA2A0A3DFE0076D08F /* Models */,
 				4F59FBFB2A0A3E040076D08F /* ViewModels */,
 				4F59FBFC2A0A3E1F0076D08F /* Views */,
@@ -174,6 +178,7 @@
 			name = skytrain;
 			packageProductDependencies = (
 				4F59FBD12A0A1F110076D08F /* Drawer */,
+				4F636D1C2A0EF9E6003FE336 /* Alamofire */,
 			);
 			productName = skytrain;
 			productReference = 4F59FBBF2A0A1EED0076D08F /* skytrain.app */;
@@ -205,6 +210,7 @@
 			mainGroup = 4F59FBB62A0A1EED0076D08F;
 			packageReferences = (
 				4F59FBD02A0A1F110076D08F /* XCRemoteSwiftPackageReference "swiftui-drawer" */,
+				4F636D1B2A0EF9E6003FE336 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 4F59FBC02A0A1EED0076D08F /* Products */;
 			projectDirPath = "";
@@ -378,6 +384,7 @@
 				DEVELOPMENT_TEAM = X34AX4W9SU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = skytrain/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -407,6 +414,7 @@
 				DEVELOPMENT_TEAM = X34AX4W9SU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = skytrain/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -457,6 +465,14 @@
 				kind = branch;
 			};
 		};
+		4F636D1B2A0EF9E6003FE336 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -464,6 +480,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4F59FBD02A0A1F110076D08F /* XCRemoteSwiftPackageReference "swiftui-drawer" */;
 			productName = Drawer;
+		};
+		4F636D1C2A0EF9E6003FE336 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F636D1B2A0EF9E6003FE336 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

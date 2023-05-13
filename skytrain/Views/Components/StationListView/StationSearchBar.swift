@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct StationSearchBar: View {
-    @Binding var text: String
+    @Binding var searchText: String
     
     var body: some View {
         
@@ -17,7 +17,7 @@ struct StationSearchBar: View {
             Image(systemName: "magnifyingglass")
                 .foregroundColor(.gray.opacity(0.5))
             
-            TextField("Search", text: $text)
+            TextField("Search", text: $searchText)
         }
         .frame(height: 40)
         .padding(.horizontal, 35)
