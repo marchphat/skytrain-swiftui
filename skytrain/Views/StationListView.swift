@@ -20,7 +20,10 @@ struct StationListView: View {
     
     var body: some View {
         VStack {
-            StationSearchCloseButton(currentView: $currentView)
+            CloseButton(currentView: $currentView)
+                .padding(.top, 20)
+                .padding(.trailing, 25)
+                .frame(maxWidth: .infinity, alignment: .trailing)
             
             Text(currentView == .searchFromStation ? "Starting Station" : "Destination Station")
                 .font(.title)
@@ -56,12 +59,13 @@ struct StationListView: View {
         }
         .padding(.top, paddingTop)
         .background(Color.white)
-        .onAppear(perform: {
+        .onChange(of: stationViewModel.allStations) { _ in
             stationViewModel.filterSelectedStations(selectedLine: selectedStationLine,
                                                     currentView: currentView,
                                                     selectedFromStation: selectedFromStation,
                                                     selectedToStation: selectedToStation)
-            
+        }
+        .onAppear(perform: {
             withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
                 paddingTop = 0
             }

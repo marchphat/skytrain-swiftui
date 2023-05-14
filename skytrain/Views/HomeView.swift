@@ -34,6 +34,10 @@ struct HomeView: View {
                     selectedToStation: $selectedToStation,
                     previousView: $previousView
                 )
+                
+            case .getRoutes:
+                RouteListView(selectedFromStation: $selectedFromStation,
+                          selectedToStation: $selectedToStation, currentView: $currentView)
             }
         }
     }

@@ -1,14 +1,15 @@
 //
-//  StationSearchCell.swift
+//  RouteDetailsCell.swift
 //  skytrain
 //
-//  Created by Nantanat Thongthep on 9/5/2566 BE.
+//  Created by Nantanat Thongthep on 15/5/2566 BE.
 //
+
 import SwiftUI
 
-struct StationSearchCell: View {
+struct RouteDetailsCell: View {
     @State private var image_name: String = "questionmark-logo"
-    var station: Station
+    var route: Route
     
     var body: some View {
         HStack {
@@ -31,12 +32,12 @@ struct StationSearchCell: View {
             //MARK: - Station Details
             VStack(alignment: .leading) {
                 HStack {
-                    Text(station.id ?? "ID not found.")
-                        .font(.title3)
-                        .fontWeight(.semibold)
+                    Text(route.id ?? "ID not found.")
+                        .font(.subheadline)
+                        .fontWeight(.bold)
                 }
                 
-                Text(station.name ?? "Station not found.")
+                Text(route.name ?? "Station not found.")
                     .font(.body)
                     .lineLimit(1)
                 
@@ -44,11 +45,10 @@ struct StationSearchCell: View {
             .padding(.leading, 10)
             
             Spacer()
-            
         }
         .padding(.horizontal, 20)
         .onAppear {
-            switch station.line {
+            switch route.line {
             case "bts":
                 image_name = "bts-logo"
             case "mrt":

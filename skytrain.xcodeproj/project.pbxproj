@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F3E9A6E2A0D5C5000442C8C /* StationSearchCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3E9A6D2A0D5C5000442C8C /* StationSearchCloseButton.swift */; };
+		4F39B1BA2A114C9700D1BCE1 /* Pointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1B92A114C9700D1BCE1 /* Pointer.swift */; };
+		4F39B1BC2A1158E100D1BCE1 /* StationSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1BB2A1158E100D1BCE1 /* StationSearchField.swift */; };
+		4F39B1BE2A115AC300D1BCE1 /* RouteViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1BD2A115AC300D1BCE1 /* RouteViewHeader.swift */; };
+		4F39B1C02A11692700D1BCE1 /* RouteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1BF2A11692700D1BCE1 /* RouteList.swift */; };
+		4F39B1C22A11698100D1BCE1 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1C12A11698100D1BCE1 /* Route.swift */; };
+		4F39B1C42A11785000D1BCE1 /* RouteDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1C32A11785000D1BCE1 /* RouteDetailsCell.swift */; };
+		4F3E9A6E2A0D5C5000442C8C /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3E9A6D2A0D5C5000442C8C /* CloseButton.swift */; };
 		4F3E9A702A0D5D7A00442C8C /* StationSearchBarFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3E9A6F2A0D5D7A00442C8C /* StationSearchBarFilter.swift */; };
 		4F3E9A722A0D5F8B00442C8C /* StationSearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3E9A712A0D5F8B00442C8C /* StationSearchList.swift */; };
 		4F59FBC32A0A1EED0076D08F /* skytrainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FBC22A0A1EED0076D08F /* skytrainApp.swift */; };
@@ -19,17 +25,25 @@
 		4F59FC002A0A3EC30076D08F /* StationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FBFF2A0A3EC30076D08F /* StationViewModel.swift */; };
 		4F59FC022A0A4AA90076D08F /* StationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC012A0A4AA90076D08F /* StationListView.swift */; };
 		4F59FC042A0A4BF50076D08F /* StationSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC032A0A4BF50076D08F /* StationSearchBar.swift */; };
-		4F59FC062A0A4C5E0076D08F /* StationSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC052A0A4C5E0076D08F /* StationSearchCell.swift */; };
+		4F59FC062A0A4C5E0076D08F /* StationDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC052A0A4C5E0076D08F /* StationDetailsCell.swift */; };
 		4F59FC132A0AE7940076D08F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC122A0AE7940076D08F /* MapView.swift */; };
 		4F59FC152A0AE8660076D08F /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC142A0AE8660076D08F /* AnnotationView.swift */; };
 		4F59FC192A0B47A80076D08F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC182A0B47A80076D08F /* HomeView.swift */; };
 		4F59FC1B2A0B5DEA0076D08F /* StationSearchBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC1A2A0B5DEA0076D08F /* StationSearchBox.swift */; };
 		4F59FC242A0C0B0A0076D08F /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FC232A0C0B0A0076D08F /* ViewState.swift */; };
 		4F636D1D2A0EF9E6003FE336 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4F636D1C2A0EF9E6003FE336 /* Alamofire */; };
+		4F731E402A1015C300754C15 /* RouteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F731E3F2A1015C300754C15 /* RouteListView.swift */; };
+		4F731E462A1025C200754C15 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F731E452A1025C200754C15 /* UIScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4F3E9A6D2A0D5C5000442C8C /* StationSearchCloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchCloseButton.swift; sourceTree = "<group>"; };
+		4F39B1B92A114C9700D1BCE1 /* Pointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pointer.swift; sourceTree = "<group>"; };
+		4F39B1BB2A1158E100D1BCE1 /* StationSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchField.swift; sourceTree = "<group>"; };
+		4F39B1BD2A115AC300D1BCE1 /* RouteViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewHeader.swift; sourceTree = "<group>"; };
+		4F39B1BF2A11692700D1BCE1 /* RouteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteList.swift; sourceTree = "<group>"; };
+		4F39B1C12A11698100D1BCE1 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		4F39B1C32A11785000D1BCE1 /* RouteDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetailsCell.swift; sourceTree = "<group>"; };
+		4F3E9A6D2A0D5C5000442C8C /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		4F3E9A6F2A0D5D7A00442C8C /* StationSearchBarFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchBarFilter.swift; sourceTree = "<group>"; };
 		4F3E9A712A0D5F8B00442C8C /* StationSearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchList.swift; sourceTree = "<group>"; };
 		4F59FBBF2A0A1EED0076D08F /* skytrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = skytrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,12 +55,14 @@
 		4F59FBFF2A0A3EC30076D08F /* StationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewModel.swift; sourceTree = "<group>"; };
 		4F59FC012A0A4AA90076D08F /* StationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListView.swift; sourceTree = "<group>"; };
 		4F59FC032A0A4BF50076D08F /* StationSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchBar.swift; sourceTree = "<group>"; };
-		4F59FC052A0A4C5E0076D08F /* StationSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchCell.swift; sourceTree = "<group>"; };
+		4F59FC052A0A4C5E0076D08F /* StationDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailsCell.swift; sourceTree = "<group>"; };
 		4F59FC122A0AE7940076D08F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		4F59FC142A0AE8660076D08F /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		4F59FC182A0B47A80076D08F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4F59FC1A2A0B5DEA0076D08F /* StationSearchBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchBox.swift; sourceTree = "<group>"; };
 		4F59FC232A0C0B0A0076D08F /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		4F731E3F2A1015C300754C15 /* RouteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListView.swift; sourceTree = "<group>"; };
+		4F731E452A1025C200754C15 /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
 		4F8F7ECD2A0F7C1B00D25D93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,13 +99,14 @@
 			isa = PBXGroup;
 			children = (
 				4F8F7ECD2A0F7C1B00D25D93 /* Info.plist */,
+				4F59FBC62A0A1EEE0076D08F /* Assets.xcassets */,
+				4F59FBF82A0A3AB70076D08F /* Stations.json */,
+				4F59FBC22A0A1EED0076D08F /* skytrainApp.swift */,
 				4F59FBFA2A0A3DFE0076D08F /* Models */,
 				4F59FBFB2A0A3E040076D08F /* ViewModels */,
 				4F59FBFC2A0A3E1F0076D08F /* Views */,
-				4F59FBC22A0A1EED0076D08F /* skytrainApp.swift */,
-				4F59FBC62A0A1EEE0076D08F /* Assets.xcassets */,
+				4F731E412A101F5D00754C15 /* Extensions */,
 				4F59FBC82A0A1EEE0076D08F /* Preview Content */,
-				4F59FBF82A0A3AB70076D08F /* Stations.json */,
 			);
 			path = skytrain;
 			sourceTree = "<group>";
@@ -107,6 +124,7 @@
 			children = (
 				4F59FBFD2A0A3E610076D08F /* Station.swift */,
 				4F59FC232A0C0B0A0076D08F /* ViewState.swift */,
+				4F39B1C12A11698100D1BCE1 /* Route.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,6 +142,7 @@
 			children = (
 				4F59FC182A0B47A80076D08F /* HomeView.swift */,
 				4F59FC012A0A4AA90076D08F /* StationListView.swift */,
+				4F731E3F2A1015C300754C15 /* RouteListView.swift */,
 				4F59FC0A2A0A55E60076D08F /* Components */,
 			);
 			path = Views;
@@ -132,8 +151,12 @@
 		4F59FC0A2A0A55E60076D08F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				4F39B1B92A114C9700D1BCE1 /* Pointer.swift */,
+				4F3E9A6D2A0D5C5000442C8C /* CloseButton.swift */,
+				4F59FC052A0A4C5E0076D08F /* StationDetailsCell.swift */,
 				4F59FC1D2A0B695C0076D08F /* HomeView */,
 				4F59FC1C2A0B694B0076D08F /* StationListView */,
+				4F731E422A1021FD00754C15 /* RouteView */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -141,11 +164,9 @@
 		4F59FC1C2A0B694B0076D08F /* StationListView */ = {
 			isa = PBXGroup;
 			children = (
-				4F3E9A6D2A0D5C5000442C8C /* StationSearchCloseButton.swift */,
 				4F59FC032A0A4BF50076D08F /* StationSearchBar.swift */,
 				4F3E9A6F2A0D5D7A00442C8C /* StationSearchBarFilter.swift */,
 				4F3E9A712A0D5F8B00442C8C /* StationSearchList.swift */,
-				4F59FC052A0A4C5E0076D08F /* StationSearchCell.swift */,
 			);
 			path = StationListView;
 			sourceTree = "<group>";
@@ -156,8 +177,27 @@
 				4F59FC122A0AE7940076D08F /* MapView.swift */,
 				4F59FC142A0AE8660076D08F /* AnnotationView.swift */,
 				4F59FC1A2A0B5DEA0076D08F /* StationSearchBox.swift */,
+				4F39B1BB2A1158E100D1BCE1 /* StationSearchField.swift */,
 			);
 			path = HomeView;
+			sourceTree = "<group>";
+		};
+		4F731E412A101F5D00754C15 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4F731E452A1025C200754C15 /* UIScreen.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4F731E422A1021FD00754C15 /* RouteView */ = {
+			isa = PBXGroup;
+			children = (
+				4F39B1BD2A115AC300D1BCE1 /* RouteViewHeader.swift */,
+				4F39B1BF2A11692700D1BCE1 /* RouteList.swift */,
+				4F39B1C32A11785000D1BCE1 /* RouteDetailsCell.swift */,
+			);
+			path = RouteView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,20 +279,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F3E9A6E2A0D5C5000442C8C /* StationSearchCloseButton.swift in Sources */,
+				4F39B1C42A11785000D1BCE1 /* RouteDetailsCell.swift in Sources */,
+				4F3E9A6E2A0D5C5000442C8C /* CloseButton.swift in Sources */,
+				4F731E402A1015C300754C15 /* RouteListView.swift in Sources */,
 				4F59FC042A0A4BF50076D08F /* StationSearchBar.swift in Sources */,
 				4F59FC152A0AE8660076D08F /* AnnotationView.swift in Sources */,
 				4F59FC022A0A4AA90076D08F /* StationListView.swift in Sources */,
-				4F59FC062A0A4C5E0076D08F /* StationSearchCell.swift in Sources */,
+				4F59FC062A0A4C5E0076D08F /* StationDetailsCell.swift in Sources */,
+				4F731E462A1025C200754C15 /* UIScreen.swift in Sources */,
+				4F39B1BC2A1158E100D1BCE1 /* StationSearchField.swift in Sources */,
 				4F59FBFE2A0A3E610076D08F /* Station.swift in Sources */,
 				4F59FC1B2A0B5DEA0076D08F /* StationSearchBox.swift in Sources */,
 				4F59FC192A0B47A80076D08F /* HomeView.swift in Sources */,
+				4F39B1BE2A115AC300D1BCE1 /* RouteViewHeader.swift in Sources */,
+				4F39B1C02A11692700D1BCE1 /* RouteList.swift in Sources */,
+				4F39B1C22A11698100D1BCE1 /* Route.swift in Sources */,
 				4F59FBC32A0A1EED0076D08F /* skytrainApp.swift in Sources */,
 				4F59FC242A0C0B0A0076D08F /* ViewState.swift in Sources */,
 				4F59FC132A0AE7940076D08F /* MapView.swift in Sources */,
 				4F3E9A702A0D5D7A00442C8C /* StationSearchBarFilter.swift in Sources */,
 				4F3E9A722A0D5F8B00442C8C /* StationSearchList.swift in Sources */,
 				4F59FC002A0A3EC30076D08F /* StationViewModel.swift in Sources */,
+				4F39B1BA2A114C9700D1BCE1 /* Pointer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

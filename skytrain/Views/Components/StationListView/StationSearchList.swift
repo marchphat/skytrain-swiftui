@@ -40,7 +40,7 @@ struct StationSearchList: View {
                             }
                         }
                     
-                    StationSearchCell(station: station)
+                    StationDetailsCell(station: station)
                 }
                 .padding(.top, 8)
                 
