@@ -21,7 +21,6 @@ struct RouteSaveButton: View {
                 
                 VStack {
                     Button(action: {
-                        // Handle save button action here
                     }) {
                         Image(systemName: "bookmark.fill")
                             .font(.title2)
@@ -34,7 +33,6 @@ struct RouteSaveButton: View {
                         .frame(width: 40, height: 1.5)
                     
                     Button(action: {
-                        // Handle save button action here
                     }) {
                         Image(systemName: "location.fill")
                             .font(.title2)

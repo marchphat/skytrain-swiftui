@@ -20,23 +20,29 @@ struct CloseButton: View {
         }) {
             switch currentView {
             case .searchFromStation, .searchToStation:
-                ZStack {
-                    Circle()
-                        .frame(width: 25, height: 25)
-                        .foregroundColor(Color(.secondarySystemBackground))
-                    Image(systemName: "xmark")
-                        .font(.system(size: 12, weight: .bold, design: .rounded))
-                        .foregroundColor(Color(.secondaryLabel))
-                }
+                CircleClostButton()
+                
             case .getRoutes:
-                Text("Done")
-                    .foregroundColor(Color.blue)
-                    .fontWeight(.semibold)
+                CircleClostButton()
+                
             default:
                 Text("Done")
                     .foregroundColor(Color.blue)
                     .fontWeight(.semibold)
             }
+        }
+    }
+}
+
+struct CircleClostButton: View {
+    var body: some View {
+        ZStack {
+            Circle()
+                .frame(width: 25, height: 25)
+                .foregroundColor(Color(.secondarySystemBackground))
+            Image(systemName: "xmark")
+                .font(.system(size: 12, weight: .bold, design: .rounded))
+                .foregroundColor(Color(.secondaryLabel))
         }
     }
 }

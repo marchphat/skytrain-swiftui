@@ -12,6 +12,8 @@ struct HomeView: View {
     @State private var selectedFromStation: Station?
     @State private var selectedToStation: Station?
     @State private var previousView: ViewState = ViewState.home
+    @State private var selectedRoute: [Route]?
+    @State private var selectedRouteFees: Float = 0
     
     var body: some View {
         ZStack {
@@ -38,8 +40,18 @@ struct HomeView: View {
                 )
                 
             case .getRoutes:
-                RouteListView(selectedFromStation: $selectedFromStation,
-                          selectedToStation: $selectedToStation, currentView: $currentView)
+                GetRoutesListView(currentView: $currentView,
+                                  selectedFromStation:  $selectedFromStation,
+                                  selectedToStation: $selectedToStation,
+                                  selectedRoute: $selectedRoute,
+                                  selectedRouteFees: $selectedRouteFees)
+                
+            case .routeCreated:
+                RouteCreatedView(currentView:  $currentView,
+                                 selectedFromStation: $selectedFromStation,
+                                 selectedToStation: $selectedToStation,
+                                 selectedRoute: $selectedRoute,
+                                 selectedRouteFees: $selectedRouteFees)
             }
         }
     }

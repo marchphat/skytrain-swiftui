@@ -8,18 +8,19 @@
 import SwiftUI
 import Drawer
 
-struct RouteListView: View {
-    @StateObject private var stationViewModel = StationViewModel()
-    
+struct RouteCreatedView: View {
+    @ObservedObject private var routeViewModel = RouteViewModel()
+        
     @State private var isRouteViewShow: Bool = false
     @State private var pointerStraightHeight: CGFloat = 15
     @State private var isLiked = false
     @State private var drawerHeights = drawerDefault
     
+    @Binding var currentView: ViewState
     @Binding var selectedFromStation: Station?
     @Binding var selectedToStation: Station?
-    @Binding var currentView: ViewState
-
+    @Binding var selectedRoute: [Route]?
+    @Binding var selectedRouteFees: Float
     
     var body: some View {
         Drawer {
@@ -36,12 +37,11 @@ struct RouteListView: View {
                         .padding(.bottom, 14)
                     
                     
-                    CloseButton(currentView: $currentView)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal)
-                    
                     HStack {
-                        Text("฿20")
+                        CloseButton(currentView: $currentView)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                        Text(String(format: "฿%.2f", selectedRouteFees))
                         
                         Text("·")
                         
@@ -55,7 +55,10 @@ struct RouteListView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     .padding(.horizontal)
-                    .padding(.bottom, 10)
+//                    .padding(.bottom, 10)
+                    
+                    Divider()
+                        .padding(.vertical, 4)
                     
                     HStack {
                         Pointer(straightlineHeight: $pointerStraightHeight)
@@ -73,11 +76,10 @@ struct RouteListView: View {
                     
                     Divider()
                         .padding(.vertical, 4)
-                    
-                    RouteList(routeStation: $stationViewModel.selectedRoutes)
+                                        
+                    RouteCreated(selectedRoute: $selectedRoute)
                     
                     Spacer()
-                    
                 }
             }
             

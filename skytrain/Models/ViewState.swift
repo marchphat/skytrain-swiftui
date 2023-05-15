@@ -12,4 +12,5 @@ enum ViewState {
     case searchFromStation
     case searchToStation
     case getRoutes
+    case routeCreated
 }

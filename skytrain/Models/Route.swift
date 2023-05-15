@@ -7,22 +7,53 @@
 
 import Foundation
 
-struct Route: Equatable, Identifiable, Codable {
+//struct Route: Decodable, Equatable, Identifiable {
+//    let id: String?
+//    let name: String?
+//    let line: String?
+//    let lineColor: String?
+//    let isExtended: Bool
+//    let latitude: Double
+//    let longitude: Double
+////    let fees: Float
+//
+//    enum CodingKeys: String, CodingKey {
+//        case id = "StationId"
+//        case name = "StationName"
+//        case line = "StationLine"
+//        case lineColor = "StationLineColor"
+//        case isExtended = "IsExtended"
+//        case latitude = "Latitude"
+//        case longitude = "Longitude"
+////        case fees = "fees"
+//    }
+//
+//}
+
+struct Route: Codable, Identifiable {
     let id: String?
     let name: String?
-    let latitude: Double
-    let longitude: Double
     let line: String?
     let lineColor: String?
-    var arriveTime: String?
     let isExtended: Bool
+    let latitude: Double
+    let longitude: Double
     
-//    enum CodingKeys: String, CodingKey {
-//        case id = "station_id"
-//        case name = "station_name"
-//        case line = "station_line"
-//        case lineColor = "station_linecolor"
-//        case arriveTime = "arriveTime"
-//    }
-    
+    enum CodingKeys: String, CodingKey {
+        case id = "StationId"
+        case name = "StationName"
+        case line = "StationLine"
+        case lineColor = "StationLineColor"
+        case isExtended = "IsExtended"
+        case latitude = "Latitude"
+        case longitude = "Longitude"
+    }
 }
+
+enum RouteType {
+    case shortNcheap
+    case shortest
+    case cheapest
+    case general
+}
+

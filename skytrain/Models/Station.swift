@@ -35,7 +35,7 @@ struct Station: Decodable, Equatable, Identifiable {
     }
 }
 
-enum StationLine: String, CaseIterable {
+enum StationLine: String {
     case all = "all"
     case bts = "bts"
     case mrt = "mrt"

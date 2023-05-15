@@ -24,25 +24,9 @@ final class StationViewModel: ObservableObject {
     // MARK: - Initializer
     init() {
         fetchStations()
-        fetchRoutes()
     }
     
     // MARK: - Private Methods
-    private func fetchRoutes() {
-        guard let url = Bundle.main.url(forResource: "Stations", withExtension: "json"),
-              let data = try? Data(contentsOf: url) else {
-            print("JSON file not found or failed to get data from URL")
-            return
-        }
-        
-        do {
-            let stations = try JSONDecoder().decode([Route].self, from: data)
-            selectedRoutes = stations
-        } catch {
-            print("Error decoding JSON data: \(error.localizedDescription)", "yessssss")
-        }
-    }
-    
     private func fetchStations() {
         let url = "http://127.0.0.1:5214/api/Station"
         

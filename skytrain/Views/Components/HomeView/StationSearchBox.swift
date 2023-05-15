@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct StationSearchBox: View {
+    @ObservedObject private var routeViewModel = RouteViewModel()
+    
     @State private var paddingBottom: CGFloat = 20
     @State private var isShowingStationListView: Bool = false
     @State private var pointerStraightHeight: CGFloat = 33
