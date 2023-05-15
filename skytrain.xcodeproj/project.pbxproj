@@ -13,6 +13,10 @@
 		4F39B1C02A11692700D1BCE1 /* RouteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1BF2A11692700D1BCE1 /* RouteList.swift */; };
 		4F39B1C22A11698100D1BCE1 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1C12A11698100D1BCE1 /* Route.swift */; };
 		4F39B1C42A11785000D1BCE1 /* RouteDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1C32A11785000D1BCE1 /* RouteDetailsCell.swift */; };
+		4F39B1C82A1253CC00D1BCE1 /* RouteSaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1C72A1253CC00D1BCE1 /* RouteSaveButton.swift */; };
+		4F39B1CC2A12835B00D1BCE1 /* FavoriteRoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1CB2A12835B00D1BCE1 /* FavoriteRoutesView.swift */; };
+		4F39B1CE2A12856500D1BCE1 /* Drawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1CD2A12856500D1BCE1 /* Drawer.swift */; };
+		4F39B1D12A12863F00D1BCE1 /* FavoriteThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1D02A12863F00D1BCE1 /* FavoriteThumbnail.swift */; };
 		4F3E9A6E2A0D5C5000442C8C /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3E9A6D2A0D5C5000442C8C /* CloseButton.swift */; };
 		4F3E9A702A0D5D7A00442C8C /* StationSearchBarFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3E9A6F2A0D5D7A00442C8C /* StationSearchBarFilter.swift */; };
 		4F3E9A722A0D5F8B00442C8C /* StationSearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3E9A712A0D5F8B00442C8C /* StationSearchList.swift */; };
@@ -43,6 +47,10 @@
 		4F39B1BF2A11692700D1BCE1 /* RouteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteList.swift; sourceTree = "<group>"; };
 		4F39B1C12A11698100D1BCE1 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		4F39B1C32A11785000D1BCE1 /* RouteDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetailsCell.swift; sourceTree = "<group>"; };
+		4F39B1C72A1253CC00D1BCE1 /* RouteSaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteSaveButton.swift; sourceTree = "<group>"; };
+		4F39B1CB2A12835B00D1BCE1 /* FavoriteRoutesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRoutesView.swift; sourceTree = "<group>"; };
+		4F39B1CD2A12856500D1BCE1 /* Drawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawer.swift; sourceTree = "<group>"; };
+		4F39B1D02A12863F00D1BCE1 /* FavoriteThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteThumbnail.swift; sourceTree = "<group>"; };
 		4F3E9A6D2A0D5C5000442C8C /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		4F3E9A6F2A0D5D7A00442C8C /* StationSearchBarFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchBarFilter.swift; sourceTree = "<group>"; };
 		4F3E9A712A0D5F8B00442C8C /* StationSearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchList.swift; sourceTree = "<group>"; };
@@ -79,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F39B1CF2A1285F600D1BCE1 /* FavoriteRouteView */ = {
+			isa = PBXGroup;
+			children = (
+				4F39B1D02A12863F00D1BCE1 /* FavoriteThumbnail.swift */,
+			);
+			path = FavoriteRouteView;
+			sourceTree = "<group>";
+		};
 		4F59FBB62A0A1EED0076D08F = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +141,7 @@
 				4F59FBFD2A0A3E610076D08F /* Station.swift */,
 				4F59FC232A0C0B0A0076D08F /* ViewState.swift */,
 				4F39B1C12A11698100D1BCE1 /* Route.swift */,
+				4F39B1CD2A12856500D1BCE1 /* Drawer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -143,6 +160,7 @@
 				4F59FC182A0B47A80076D08F /* HomeView.swift */,
 				4F59FC012A0A4AA90076D08F /* StationListView.swift */,
 				4F731E3F2A1015C300754C15 /* RouteListView.swift */,
+				4F39B1CB2A12835B00D1BCE1 /* FavoriteRoutesView.swift */,
 				4F59FC0A2A0A55E60076D08F /* Components */,
 			);
 			path = Views;
@@ -153,10 +171,10 @@
 			children = (
 				4F39B1B92A114C9700D1BCE1 /* Pointer.swift */,
 				4F3E9A6D2A0D5C5000442C8C /* CloseButton.swift */,
-				4F59FC052A0A4C5E0076D08F /* StationDetailsCell.swift */,
 				4F59FC1D2A0B695C0076D08F /* HomeView */,
 				4F59FC1C2A0B694B0076D08F /* StationListView */,
 				4F731E422A1021FD00754C15 /* RouteView */,
+				4F39B1CF2A1285F600D1BCE1 /* FavoriteRouteView */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -167,6 +185,7 @@
 				4F59FC032A0A4BF50076D08F /* StationSearchBar.swift */,
 				4F3E9A6F2A0D5D7A00442C8C /* StationSearchBarFilter.swift */,
 				4F3E9A712A0D5F8B00442C8C /* StationSearchList.swift */,
+				4F59FC052A0A4C5E0076D08F /* StationDetailsCell.swift */,
 			);
 			path = StationListView;
 			sourceTree = "<group>";
@@ -178,6 +197,7 @@
 				4F59FC142A0AE8660076D08F /* AnnotationView.swift */,
 				4F59FC1A2A0B5DEA0076D08F /* StationSearchBox.swift */,
 				4F39B1BB2A1158E100D1BCE1 /* StationSearchField.swift */,
+				4F39B1C72A1253CC00D1BCE1 /* RouteSaveButton.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -279,18 +299,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F39B1CE2A12856500D1BCE1 /* Drawer.swift in Sources */,
 				4F39B1C42A11785000D1BCE1 /* RouteDetailsCell.swift in Sources */,
 				4F3E9A6E2A0D5C5000442C8C /* CloseButton.swift in Sources */,
 				4F731E402A1015C300754C15 /* RouteListView.swift in Sources */,
+				4F39B1C82A1253CC00D1BCE1 /* RouteSaveButton.swift in Sources */,
 				4F59FC042A0A4BF50076D08F /* StationSearchBar.swift in Sources */,
 				4F59FC152A0AE8660076D08F /* AnnotationView.swift in Sources */,
 				4F59FC022A0A4AA90076D08F /* StationListView.swift in Sources */,
+				4F39B1D12A12863F00D1BCE1 /* FavoriteThumbnail.swift in Sources */,
 				4F59FC062A0A4C5E0076D08F /* StationDetailsCell.swift in Sources */,
 				4F731E462A1025C200754C15 /* UIScreen.swift in Sources */,
 				4F39B1BC2A1158E100D1BCE1 /* StationSearchField.swift in Sources */,
 				4F59FBFE2A0A3E610076D08F /* Station.swift in Sources */,
 				4F59FC1B2A0B5DEA0076D08F /* StationSearchBox.swift in Sources */,
 				4F59FC192A0B47A80076D08F /* HomeView.swift in Sources */,
+				4F39B1CC2A12835B00D1BCE1 /* FavoriteRoutesView.swift in Sources */,
 				4F39B1BE2A115AC300D1BCE1 /* RouteViewHeader.swift in Sources */,
 				4F39B1C02A11692700D1BCE1 /* RouteList.swift in Sources */,
 				4F39B1C22A11698100D1BCE1 /* Route.swift in Sources */,

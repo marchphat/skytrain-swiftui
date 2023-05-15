@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Route: Decodable, Equatable, Identifiable {
+struct Route: Equatable, Identifiable, Codable {
     let id: String?
     let name: String?
     let latitude: Double
@@ -17,12 +17,6 @@ struct Route: Decodable, Equatable, Identifiable {
     var arriveTime: String?
     let isExtended: Bool
     
-//    let id: String?
-//    let name: String?
-//    let line: String?
-//    let lineColor: String?
-//    var arriveTime: String?
-//
 //    enum CodingKeys: String, CodingKey {
 //        case id = "station_id"
 //        case name = "station_name"
@@ -30,4 +24,5 @@ struct Route: Decodable, Equatable, Identifiable {
 //        case lineColor = "station_linecolor"
 //        case arriveTime = "arriveTime"
 //    }
+    
 }

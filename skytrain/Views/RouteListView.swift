@@ -14,9 +14,7 @@ struct RouteListView: View {
     @State private var isRouteViewShow: Bool = false
     @State private var pointerStraightHeight: CGFloat = 15
     @State private var isLiked = false
-    @State private var drawerHeights = [(UIScreen.screenHeight * 0.15),
-                                         (UIScreen.screenHeight * 0.60),
-                                         (UIScreen.screenHeight * 0.90)]
+    @State private var drawerHeights = drawerDefault
     
     @Binding var selectedFromStation: Station?
     @Binding var selectedToStation: Station?

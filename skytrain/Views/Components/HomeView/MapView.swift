@@ -14,8 +14,8 @@ struct MapView: View {
     @Binding var selectedFromStation: Station?
     @Binding var selectedToStation: Station?
     
-    //MARK: - Suvarnabhumi ARL
-    private let defaultStation = CLLocationCoordinate2D(latitude:  13.703119561182797, longitude:  100.75187358910955)
+    //MARK: - Phaya Thai ARL
+    private let defaultStation = CLLocationCoordinate2D(latitude: 13.780825439075091, longitude:  100.54287689074913)
     
     private var region: MKCoordinateRegion {
         let centerCoordinate: CLLocationCoordinate2D?
@@ -29,7 +29,7 @@ struct MapView: View {
         }
         
         return MKCoordinateRegion(center: centerCoordinate ?? defaultStation,
-                                  span: MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15))
+                                  span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
     }
 
     

@@ -18,9 +18,11 @@ struct HomeView: View {
             MapView(previousView: $previousView,
                     selectedFromStation: $selectedFromStation,
                     selectedToStation: $selectedToStation)
-            
+                
             switch currentView {
             case .home:
+                RouteSaveButton()
+                
                 StationSearchBox(
                     currentView: $currentView,
                     selectedFromStation: $selectedFromStation,

@@ -87,32 +87,35 @@ final class StationViewModel: ObservableObject {
         let url = "http://localhost:5214/api/ArriveTime/\(stationId)"
         
         AF.request(url).validate().response { response in
-            
-            switch response.result {
-            case .success(let data):
-                if let data = data, let arriveTime = String(data: data, encoding: .utf8)?.trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: "\"", with: "") {
-                    let formatter = DateFormatter()
-                    formatter.dateFormat = "HH:mm:ss.SSSSSSS"
-                    if let date = formatter.date(from: arriveTime) {
-                        let minuteSecondFormatter = DateFormatter()
-                        minuteSecondFormatter.dateFormat = "mm:ss"
-                        let minuteSecondString = minuteSecondFormatter.string(from: date)
-                        completion(.success(minuteSecondString))
-                        
-                    } else {
-                        completion(.failure(APIError.invalidResponse))
-                    }
-                    
-                } else {
-                    completion(.failure(APIError.invalidResponse))
-                }
-                
-            case .failure(let error):
-                completion(.failure(error))
+            guard let data = response.data else {
+                completion(.failure(APIError.invalidResponse))
+                return
             }
+            
+            //MARK: - Remove "" from "00:00:00" to 00:00:00
+            guard let arriveTime = String(data: data, encoding: .utf8)?.trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: "\"", with: "") else {
+                completion(.failure(APIError.invalidResponse))
+                return
+            }
+            
+            //MARK: - Convert arrival time to date format
+            let formatter = DateFormatter()
+            formatter.dateFormat = "HH:mm:ss.SSSSSSS"
+            
+            guard let date = formatter.date(from: arriveTime) else {
+                completion(.failure(APIError.invalidResponse))
+                return
+            }
+            
+            //MARK: - Format date as string in "mm:ss" format
+            let minuteSecondFormatter = DateFormatter()
+            minuteSecondFormatter.dateFormat = "mm:ss"
+            let minuteSecondString = minuteSecondFormatter.string(from: date)
+            
+            completion(.success(minuteSecondString))
         }
     }
-    
+
     
     private func isMatched(station: Station, selectedLine: StationLine, currentView: ViewState, selectedFromStation: Station?, selectedToStation: Station?) -> Bool {
         let lineMatch = selectedLine == .all || station.line?.lowercased() == selectedLine.rawValue
@@ -145,7 +148,7 @@ final class StationViewModel: ObservableObject {
         }
     }
     
-    func updateStationDetails(stations: [Station]) {
+    func updateArriveTime(stations: [Station]) {
         stations.forEach { station in
             self.fetchArriveTime(for: station.id) { result in
                 switch result {
