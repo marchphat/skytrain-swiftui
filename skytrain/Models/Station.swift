@@ -18,6 +18,7 @@ struct Station: Decodable, Equatable, Identifiable {
     var arriveTime: String?
     let isExtended: Bool
     
+    
     var coordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
     }
@@ -40,4 +41,5 @@ enum StationLine: String, CaseIterable {
     case mrt = "mrt"
     case arl = "arl"
 }
+
 

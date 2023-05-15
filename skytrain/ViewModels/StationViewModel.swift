@@ -126,9 +126,9 @@ final class StationViewModel: ObservableObject {
         
         switch currentView {
         case .searchFromStation:
-            return lineMatch && searchTextMatch && station != selectedToStation
+            return lineMatch && searchTextMatch && (station.id! != selectedToStation?.id)
         case .searchToStation:
-            return lineMatch && searchTextMatch && station != selectedFromStation
+            return lineMatch && searchTextMatch && (station.id! != selectedFromStation?.id)
         default:
             return false
         }
@@ -145,20 +145,25 @@ final class StationViewModel: ObservableObject {
         }
     }
     
+    func updateStationDetails(stations: [Station]) {
+        stations.forEach { station in
+            self.fetchArriveTime(for: station.id) { result in
+                switch result {
+                case .success(let arriveTime):
+                    DispatchQueue.main.async {
+                        var updatedStation = station
+                        updatedStation.arriveTime = arriveTime
+                        
+                        if let index = self.selectedStations.firstIndex(where: { $0.id == station.id }) {
+                            self.selectedStations[index] = updatedStation
+                        }
+                    }
+                case .failure(let error):
+                    print("Error fetching arrival time for station \(station.id ?? ""): \(error.localizedDescription)")
+                }
+            }
+        }
+    }
+
+    
 }
-
-
-//    private func fetchStations() {
-//        guard let url = Bundle.main.url(forResource: "Stations", withExtension: "json"),
-//              let data = try? Data(contentsOf: url) else {
-//            print("JSON file not found or failed to get data from URL")
-//            return
-//        }
-//
-//        do {
-//            let stations = try JSONDecoder().decode([Station].self, from: data)
-//            allStations = stations
-//        } catch {
-//            print("Error decoding JSON data: \(error.localizedDescription)")
-//        }
-//    }

@@ -70,6 +70,9 @@ struct StationListView: View {
                 paddingTop = 0
             }
         })
+        .onReceive(Timer.publish(every: 3, on: .main, in: .common).autoconnect()) { _ in
+            stationViewModel.updateStationDetails(stations: stationViewModel.selectedStations)
+        }
         
     }
 }
