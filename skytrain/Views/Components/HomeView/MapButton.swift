@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MapButton: View {
+    @Binding var previousView: ViewState
+    
     var body: some View {
         VStack {
             ZStack {
@@ -21,6 +23,7 @@ struct MapButton: View {
                 
                 VStack {
                     Button(action: {
+                        
                     }) {
                         Image(systemName: "bookmark.fill")
                             .font(.title2)
@@ -33,6 +36,7 @@ struct MapButton: View {
                         .frame(width: 40, height: 1.5)
                     
                     Button(action: {
+                        previousView = .home
                     }) {
                         Image(systemName: "location.fill")
                             .font(.title2)

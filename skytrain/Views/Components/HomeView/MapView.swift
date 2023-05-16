@@ -24,6 +24,8 @@ struct MapView: View {
             centerCoordinate = selectedFromStation?.coordinate
         case .searchToStation:
             centerCoordinate = selectedToStation?.coordinate
+        case .home:
+            centerCoordinate = defaultStation
         default:
             centerCoordinate = nil
         }

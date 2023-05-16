@@ -23,7 +23,7 @@ struct HomeView: View {
                 
             switch currentView {
             case .home:
-                MapButton()
+                MapButton(previousView: $previousView)
                 
                 StationSearchBox(
                     currentView: $currentView,
