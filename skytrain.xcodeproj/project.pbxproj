@@ -13,7 +13,7 @@
 		4F39B1C02A11692700D1BCE1 /* RouteCreated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1BF2A11692700D1BCE1 /* RouteCreated.swift */; };
 		4F39B1C22A11698100D1BCE1 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1C12A11698100D1BCE1 /* Route.swift */; };
 		4F39B1C42A11785000D1BCE1 /* RouteDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1C32A11785000D1BCE1 /* RouteDetailsCell.swift */; };
-		4F39B1C82A1253CC00D1BCE1 /* RouteSaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1C72A1253CC00D1BCE1 /* RouteSaveButton.swift */; };
+		4F39B1C82A1253CC00D1BCE1 /* MapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1C72A1253CC00D1BCE1 /* MapButton.swift */; };
 		4F39B1CE2A12856500D1BCE1 /* Drawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1CD2A12856500D1BCE1 /* Drawer.swift */; };
 		4F39B1D32A128C3900D1BCE1 /* RouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1D22A128C3900D1BCE1 /* RouteViewModel.swift */; };
 		4F39B1D52A12A57000D1BCE1 /* GetRoutesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39B1D42A12A57000D1BCE1 /* GetRoutesListView.swift */; };
@@ -49,7 +49,7 @@
 		4F39B1BF2A11692700D1BCE1 /* RouteCreated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCreated.swift; sourceTree = "<group>"; };
 		4F39B1C12A11698100D1BCE1 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		4F39B1C32A11785000D1BCE1 /* RouteDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetailsCell.swift; sourceTree = "<group>"; };
-		4F39B1C72A1253CC00D1BCE1 /* RouteSaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteSaveButton.swift; sourceTree = "<group>"; };
+		4F39B1C72A1253CC00D1BCE1 /* MapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapButton.swift; sourceTree = "<group>"; };
 		4F39B1CD2A12856500D1BCE1 /* Drawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawer.swift; sourceTree = "<group>"; };
 		4F39B1D22A128C3900D1BCE1 /* RouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewModel.swift; sourceTree = "<group>"; };
 		4F39B1D42A12A57000D1BCE1 /* GetRoutesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoutesListView.swift; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 				4F59FC142A0AE8660076D08F /* AnnotationView.swift */,
 				4F59FC1A2A0B5DEA0076D08F /* StationSearchBox.swift */,
 				4F39B1BB2A1158E100D1BCE1 /* StationSearchField.swift */,
-				4F39B1C72A1253CC00D1BCE1 /* RouteSaveButton.swift */,
+				4F39B1C72A1253CC00D1BCE1 /* MapButton.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -309,7 +309,7 @@
 				4F39B1C42A11785000D1BCE1 /* RouteDetailsCell.swift in Sources */,
 				4F3E9A6E2A0D5C5000442C8C /* CloseButton.swift in Sources */,
 				4F731E402A1015C300754C15 /* RouteCreatedView.swift in Sources */,
-				4F39B1C82A1253CC00D1BCE1 /* RouteSaveButton.swift in Sources */,
+				4F39B1C82A1253CC00D1BCE1 /* MapButton.swift in Sources */,
 				4F59FC042A0A4BF50076D08F /* StationSearchBar.swift in Sources */,
 				4F39B1D82A12ABBC00D1BCE1 /* GetRoutesDetailsCell.swift in Sources */,
 				4F59FC152A0AE8660076D08F /* AnnotationView.swift in Sources */,

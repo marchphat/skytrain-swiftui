@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RouteSaveButton: View {
+struct MapButton: View {
     var body: some View {
         VStack {
             ZStack {
