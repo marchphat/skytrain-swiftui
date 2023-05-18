@@ -55,7 +55,6 @@ struct RouteCreatedView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     .padding(.horizontal)
-//                    .padding(.bottom, 10)
                     
                     Divider()
                         .padding(.vertical, 4)

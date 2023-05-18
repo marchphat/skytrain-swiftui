@@ -14,7 +14,6 @@ final class StationViewModel: ObservableObject {
     @Published var searchStation = ""
     @Published var selectedStations = [Station]()
     @Published var allStations = [Station]()
-    @Published var selectedRoutes = [Route]()
     
     private enum APIError: Error {
         case invalidParameters
